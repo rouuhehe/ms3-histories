@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { HistoriasModule } from './histories/histories.module';
+import { HistoriesModule } from './histories/histories.module';
 
 @Module({
   imports: [
@@ -12,7 +12,7 @@ import { HistoriasModule } from './histories/histories.module';
         uri: cs.get<string>('MONGODB_URI'),
       }),
     }),
-    HistoriasModule,
+    HistoriesModule,
   ],
 })
 export class AppModule {}
