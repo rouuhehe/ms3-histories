@@ -12,7 +12,7 @@ export class HistoriesController {
   @ApiQuery({ name: 'page', required: false })
   @ApiQuery({ name: 'limit', required: false })
   @ApiResponse({ status: 200, description: 'Paginated timeline' })
-  linea(
+  timeline(
     @Param('petId') petId: string,
     @Query('page') page = 1,
     @Query('limit') limit = 20,
