@@ -13,6 +13,16 @@ async function bootstrap() {
   const doc = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/docs', app, doc);
 
+  app.enableCors({
+    origin: [
+      "https://main.d28p0502xzwadt.amplifyapp.com/", // ⚠️ cambia con tu dominio Amplify
+      "http://localhost:5173",             // útil en dev local
+    ],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    credentials: true,
+  });
+
+
   await app.listen(process.env.PORT || 3003);
 }
 bootstrap();
