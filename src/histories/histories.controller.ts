@@ -4,7 +4,7 @@ import { HistoriesService } from './histories.service';
 import { CreateHistoryDto } from './dto/create-history.dto';
 
 @ApiTags('histories')
-@Controller('histories')
+@Controller('ms3/histories')
 export class HistoriesController {
   constructor(private readonly svc: HistoriesService) {}
 
